@@ -1,0 +1,301 @@
+body{
+	font-family:  var(--font-family-r);
+	color: #3C3C3C;
+	line-height: 1.5;
+	font-size: 1.6vh;
+}
+
+*{
+	transition: all 1s ease 0s;
+}
+*:focus{
+	border: 1px solid #18B5DC;
+}
+
+.wrapper {
+	height: 100vh;
+	width: 100vw;	
+}
+
+/* HEADER */
+.header {
+	width: 100vw;
+	height: 7vh;
+	padding: 0 6vw;
+	border-bottom: 1px solid #BDBDBD;
+}
+.header__row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between
+}
+
+
+.logo a {
+	
+	display: flex;
+	align-items: center;
+
+	
+}
+
+.logo__icon{
+	width: 6vw;
+	height: 6vh;
+}
+
+.logo__itLife{
+	width: 7vw;
+	height: 3vh;
+
+}
+.nav{
+	height: 2vh;
+	display: flex;
+	justify-content: space-evenly;
+	
+}
+.header__nav{
+	width: 28vw;
+	height: 2vh;
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.7vh;	
+}
+.nav__link {
+	color: #3C3C3C;
+}
+
+.header-button {
+	font-size: 1.7vh;
+	width: 9vw;
+	height: 3.6vh;
+	border: 1px solid #3C3C3C;
+	
+}
+
+.header-button:hover,
+.header-button:focus{
+ color: #ffffff;
+ background-color: #18B5DC;
+ outline: none;
+ border: none;
+}
+/* -------------------------------- */
+
+
+main {
+	background-color: #F6F6F6;
+	width: 100vw;
+	height: 71vh;
+	padding: 12.8vh 6vw;
+	
+}
+
+
+/* SECTION ABOUT */
+
+.about {
+	height: 45.5vh;
+	width: 100%;
+	
+}
+.about__column {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.content {
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 49vw;
+	height: 12vh;
+	text-align: center;
+	
+}
+.content-title {
+	font-family: var(--font-family-b);
+	font-size: 2.9vh;
+	line-height: 3.5vh;
+	
+}
+hr{
+	background-color: #DDDBDB;
+	width: 4vw;
+
+}
+.content-subtitle {
+	font-family: var(--font-family-l);
+	font-size: 1.4vh;
+	width: 26vw;
+
+
+}
+
+.team-list__row {
+	display: flex;
+	justify-content: space-evenly;
+	
+}
+
+.card{
+	width: 23vh;
+	height: 28.5vh;
+}
+.card__ava {
+	
+	width: 23vh;
+	height: 23vh;
+	position: relative;
+	perspective: 1000px;
+
+}
+.card__ava img{
+	width: 100%;
+	height: 100%;
+}
+
+.card__ava--front,
+.card__ava--back{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+
+}
+
+.card__ava--back{
+	display: flex;
+	align-items: center;
+	background-color: #18B5DC;
+	transform: rotateY(180deg);
+}
+
+/* hover, focus */
+.card__ava:hover .card__ava--front,
+.card__ava:focus .card__ava--front{
+transform: rotateY(180deg);
+}
+
+.card__ava:hover .card__ava--back,
+.card__ava:focus .card__ava--back{
+transform: rotateY(360deg);
+	
+}
+
+/* Social-icon for card__ava */
+/* hover, focus */
+.card__icon a:hover:nth-child(1),
+.card__icon a:focus:nth-child(1){
+	content: url(../assets/images/icon-hover-ava/twitter-ava.png);
+	width: 3.6vh;
+	
+}
+
+.card__icon a:hover:nth-child(2),
+.card__icon a:focus:nth-child(2){
+	content: url(../assets/images/icon-hover-ava/facebook-ava.png);
+	width: 3.6vh;
+	
+}
+.card__icon a:hover:nth-child(3),
+.card__icon a:focus:nth-child(3){
+	content: url(../assets/images/icon-hover-ava/instagram-ava.png);
+	width: 3.6vh;
+}
+
+
+.card__name{
+	margin-top: 2vh;
+	font-family: var(--font-family-b);
+
+}
+.card__role{
+	color: #646464;
+	font-family: var(--font-family-l);
+	
+}
+/* ------------------ */
+
+
+/* Footer */
+
+.footer{
+	width: 100vw;
+	height: 22vh;
+	padding: 2vh 0;
+}
+.footer__column {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+.footer__nav{
+	width: 27vw;
+	font-size: 1.6vh;
+	
+}
+.social-icons {
+	width: 17.5vw;
+	display: flex;
+	justify-content: space-evenly;
+
+}
+.social-icons a,
+.social-icons img{
+	width: 3.6vh;
+	height: 3.6vh;
+	display: inline-block;	
+}
+
+
+
+/* Hover, Focus */
+a:hover,
+a:focus{
+	color: #18B5DC;
+}
+
+
+.footer__icons a:hover:nth-child(1),
+.footer__icons a:focus:nth-child(1){
+	content: url(../assets/images/icon-hover/icon-twitter-hover.png);
+	width: 3.6vh;
+	
+}
+
+.footer__icons a:hover:nth-child(2),
+.footer__icons a:focus:nth-child(2){
+	content: url(../assets/images/icon-hover/facebook-icon-hover.png);
+	width: 3.6vh;
+	
+}
+.footer__icons a:hover:nth-child(3),
+.footer__icons a:focus:nth-child(3){
+	content: url(../assets/images/icon-hover/instagram-hover.png);
+	width: 3.6vh;
+}
+
+.footer__icons a:hover:nth-child(4),
+.footer__icons a:focus:nth-child(4){
+	content: url(../assets/images/icon-hover/linkedinicon-hover.png);
+	width: 3.6vh;
+	
+}
+.footer__icons a:hover:nth-child(5),
+.footer__icons a:focus:nth-child(5){
+	content: url(../assets/images/icon-hover/telegram-icon-hover.png);
+	width: 3.6vh;
+	
+}
